@@ -1,0 +1,21 @@
+What is the difference between git and github?
+	Git is a version control tool and github is a platform using git,
+	which offers additional features.
+	
+Name three benefits of a version control system:
+	You can have different branches, implementing different features
+	You can revert your code to a previous version easily
+	You can keep track of the changes of different versions
+
+Name three alternatives to git:
+	Subversion
+	Mercurial
+	CVS
+
+Name two differences between git and other version control systems:
+	Git stores everything locally, changes are pushed
+	Git history can be changed
+
+Name known issues related to games engines (Unreal, Unity) and version control systems:
+	Big files for assets can lead to growing repositories as they are changed
+	and versioned. Cloning can take a long time.
