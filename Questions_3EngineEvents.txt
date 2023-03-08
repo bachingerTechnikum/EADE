@@ -1,0 +1,14 @@
+What is the difference between a dynamic linked library and a static library?
+	A DLL is linked at runtime and contained in a different file, static libraries are
+	linked during compilation and become part of the executable file.
+	
+Describe a logging system with your own words:
+	A system which keeps records of events and when they happened. Events can be categorized
+	by their importance and records of events can be filtered.
+
+What is a Design Pattern?
+	A blueprint of how to design the relationships between different parts of the program.
+
+Name and describe two Design Patterns:
+	Singleton - Takes care of the class' object creation and allows only one object at a time.
+	RAII - Resources are bound to an objects lifespan (constructor -> destructor)
