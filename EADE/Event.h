@@ -1,7 +1,5 @@
 #pragma once
-
-#include <functional>
-#include <sstream>
+#include "eadepch.h"
 
 namespace EADE 
 {

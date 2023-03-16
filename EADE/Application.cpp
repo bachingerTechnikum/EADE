@@ -1,23 +1,39 @@
+#include "eadepch.h"
 #include "Application.h"
 #include "Event.h"
 #include "ApplicationEvent.h"
-#include <iostream>
+
+#include "include/GLFW/glfw3.h"
 
 namespace EADE
 {
+	Application::Application()
+	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
+	}
+
 	void Application::run()
 	{
-		WindowResizeEvent e(1200, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			std::cout << e.ToString() << std::endl;
+			glClearColor(1, 0, 0, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			std::cout << e.ToString() << std::endl;
-		}
-		
-		//Logging
-		while (true);
+	}
+
+	void Application::OnEvent(Event& e)
+	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(std::bind(&Application::OnWindowClose, this, std::placeholders::_1));
+
+		std::cout << e.ToString() << std::endl;
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 }

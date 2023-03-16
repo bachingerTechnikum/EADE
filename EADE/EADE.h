@@ -1,7 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "eadepch.h"
 
 #include "Application.h"
 #include "EntryPoint.h"

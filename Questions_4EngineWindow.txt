@@ -1,0 +1,27 @@
+What is a precompiled header? Name pros and cons:
+	A header file that has been preprocessed for the compiler to work faster.
+	The more files are included in the program, the more time can be saved.
+	On the other side, as soon as the precompiled header is edited everything
+	has to be recompiled as well.
+	
+Describe the layer of abstraction with your own words:
+	A layer of abstraction is a part which is built in between two
+	other parts to mask the additional effort to do something.
+	Often they are wrappers around some library or other part that
+	hide parts of the library which are not important for the user.
+	
+Name the SOLID principles and describe them briefly:
+	SINGLE-RESPONSIBILITY
+		Each class has a single purpose.
+	OPEN-CLOSED:
+		Every part should be open for other parts but encapsulate
+		their own behaviour and protects its code.
+	LISKOV SUBSTITUTION:
+		Calling the behaviour of a child class via a parent-pointer
+		should never lead to unexpected behaviour.
+	INTERFACE SEGREGATION:
+		Interfaces should be broken into as small parts as possible to
+		prevent dependency on unused parts.
+	DEPENDENCY INVERSION:
+		Dependencies should flow from abstract to concrete parts,
+		from parent to child classes, from interfaces to implementations.

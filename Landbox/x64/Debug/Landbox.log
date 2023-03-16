@@ -1,1 +1,4 @@
-﻿  Landbox.vcxproj -> C:\Users\Mulder\source\repos\EADE\EADE\x64\Debug\Landbox.exe
+﻿  Landbox.cpp
+C:\Users\Mulder\source\repos\EADE\EADE\Application.h(20,27): warning C4251: "EADE::Application::m_Window": class "std::unique_ptr<EADE::Window,std::default_delete<EADE::Window>>" erfordert eine DLL-Schnittstelle, die von Clients von class "EADE::Application" verwendet wird
+C:\Users\Mulder\source\repos\EADE\EADE\Application.h(20): message : Siehe Deklaration von "std::unique_ptr<EADE::Window,std::default_delete<EADE::Window>>"
+  Landbox.vcxproj -> C:\Users\Mulder\source\repos\EADE\EADE\x64\Debug\Landbox.exe
